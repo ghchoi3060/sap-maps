@@ -193,6 +193,7 @@ nav.tabs a:focus-visible, .lane-mod a:focus-visible { outline: 2px solid var(--a
 .node { display: grid; grid-template-columns: 48px minmax(0, 1fr) minmax(0, 0.85fr); column-gap: 20px; position: relative; padding-bottom: 18px; }
 .node::before { content: ""; position: absolute; left: 23px; top: 0; bottom: 0; width: 2px; background: var(--line); }
 .node:last-child::before { bottom: auto; height: 24px; }
+.node:has(> .side:empty) > .card { grid-column: 2 / -1; }
 .rail { position: relative; z-index: 1; display: flex; justify-content: center; padding-top: 10px; }
 .num { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--surface); font-family: var(--font-mono); font-weight: 600; font-size: 14px; display: grid; place-items: center; }
 .diamond { width: 26px; height: 26px; margin-top: 4px; transform: rotate(45deg); background: var(--decide-soft); border: 2px solid var(--decide); border-radius: 3px; }
